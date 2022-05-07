@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="840.0" styleClass="gardien" stylesheets="@../GUI/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLSponsoreController">
+   <children>
+      <Label layoutX="192.0" layoutY="22.0" prefHeight="51.0" prefWidth="320.0" text="ADD SPONSOR" textFill="WHITE">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="125.0" text="Sponsore Name " textFill="#f9f7ff">
+         <font>
+            <Font name="Monospaced Regular" size="18.0" />
+         </font></Label>
+      <Label layoutX="75.0" layoutY="163.0" text="Sponsore Description " textFill="#f2f2f2">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+ 
+      <TextField fx:id="SponsoreName" layoutX="275.0" layoutY="120.0" promptText="Sponsore Name" />
+      <TextField fx:id="SponsoreDescription" layoutX="275.0" layoutY="161.0" promptText="Sponsore Desc" />
+     
+      <Button fx:id="addSponsore" layoutX="277.0" layoutY="211.0" mnemonicParsing="false" onAction="#AddSponsore" style="-fx-background-color: green;" text="Add Sponsor" textFill="WHITE" />
+      <Button fx:id="Cancel" layoutX="390.0" layoutY="211.0" mnemonicParsing="false" onAction="#EmptyFields" style="-fx-background-color: red;" text="Cancel And Return" textFill="WHITE" />
+      <ListView fx:id="ListView" layoutX="202.0" layoutY="236.0" prefHeight="33.0" prefWidth="149.0" visible="false" />
+      <Button fx:id="afficher" layoutX="545.0" layoutY="211.0" mnemonicParsing="false" onAction="#afficherSponsore" style="-fx-background-color: blue;" text="Show Sponsor List" textFill="WHITE" />
+      <Label fx:id="lbl1" layoutX="368.0" layoutY="125.0" prefHeight="17.0" prefWidth="215.0" textFill="#fcfcfc" />
+      <Label fx:id="lbl13" layoutX="359.0" layoutY="205.0" prefHeight="17.0" prefWidth="215.0" textFill="#f8f8f8" />
+      <Label fx:id="lbl14" layoutX="359.0" layoutY="288.0" prefHeight="17.0" prefWidth="215.0" textFill="WHITE" />
+      <Label fx:id="lbl5" layoutX="360.0" layoutY="329.0" prefHeight="17.0" prefWidth="215.0" textFill="#f8f8f8" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+.gardien{
+    -fx-background-color: linear-gradient(to right bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+.card {
+    -fx-background-color: rgb(255.0, 255.0, 255.0);
+    -fx-background-radius: 4.0;
+    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);
+    -fx-padding: 16 16 16 16;
+}

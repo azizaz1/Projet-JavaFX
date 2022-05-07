@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="events2.jnlp">
+  <information>
+    <title>events2</title>
+    <vendor>aziz</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="events2.jar" size="41836" download="eager" />
+    <jar href="lib\GMapsFX-2.0.9.jar" size="166541" download="eager" />
+    <jar href="lib\TrayNotification.jar" size="41019" download="eager" />
+    <jar href="lib\client-3.3.0-javadoc.jar" size="1191016" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="lib\controlsfx-samples-8.40.14.jar" size="725707" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\fxsampler-1.0.10.jar" size="30882" download="eager" />
+    <jar href="lib\gson-2.6.2-javadoc.jar" size="260989" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2206526" download="eager" />
+    <jar href="lib\jsoup-1.11.2.jar" size="392350" download="eager" />
+    <jar href="lib\mail.jar" size="462098" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.15.jar" size="2134905" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="events2.Events2"  name="events2" />
+  <update check="always"/>
+</jnlp>

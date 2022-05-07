@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestEventFXMLController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="825.0" styleClass="gardien" stylesheets="@../GUI/style.css">
+         <children>
+            <Label layoutX="63.0" layoutY="24.0" prefHeight="55.0" prefWidth="325.0" text="CREATE EVENT" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="90.0" text="Event Name " textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Regular" size="18.0" />
+               </font></Label>
+            <Label layoutX="66.0" layoutY="128.0" text="Date Begin " textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Regular" size="18.0" />
+               </font></Label>
+            <Label layoutX="63.0" layoutY="204.0" text="Governorate" textFill="#f8f8f8">
+               <font>
+                  <Font name="Monospaced Regular" size="18.0" />
+               </font></Label>
+            <Label layoutX="66.0" layoutY="289.0" text="Description " textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Regular" size="18.0" />
+               </font></Label>
+            <TextField fx:id="EventName" layoutX="202.0" layoutY="86.0" promptText="Event Name" />
+            <TextField fx:id="EventGouv" layoutX="202.0" layoutY="200.0" promptText="gouvernaurat" />
+            <TextField fx:id="EventDesc" layoutX="202.0" layoutY="285.0" promptText="Event houre, desciption" />
+            <DatePicker fx:id="EventDate" layoutX="202.0" layoutY="124.0" prefHeight="31.0" prefWidth="187.0" promptText="Date Begin Event" />
+            <TableView fx:id="Table" layoutX="24.0" layoutY="335.0" prefHeight="159.0" prefWidth="777.0" styleClass="card" stylesheets="@../GUI/style.css">
+              <columns>
+                <TableColumn fx:id="EvName" prefWidth="77.0" text="Name " />
+                <TableColumn fx:id="EvDate" prefWidth="85.0" text="Date Begin" />
+                  <TableColumn fx:id="EvFin" prefWidth="99.0" text="Date End" />
+                  <TableColumn fx:id="Evgouv" prefWidth="104.0" text="Governorate" />
+                  <TableColumn fx:id="EvEndroit" prefWidth="108.0" text="Place" />
+                  <TableColumn fx:id="Evdesc" prefWidth="130.0" text="Description" />
+                  <TableColumn fx:id="nbrparticip" prefWidth="129.0" text="Nbr participant" />
+              </columns>
+            </TableView>
+            <Label layoutX="66.0" layoutY="243.0" text="Event Place" textFill="#f8f8f8">
+               <font>
+                  <Font name="Monospaced Regular" size="18.0" />
+               </font></Label>
+            <TextField fx:id="EventPlace" layoutX="202.0" layoutY="239.0" promptText="cafe/resto..." />
+            <Label layoutX="66.0" layoutY="167.0" text="Date End " textFill="WHITE">
+               <font>
+                  <Font name="Monospaced Regular" size="18.0" />
+               </font></Label>
+            <DatePicker fx:id="EventEnd" layoutX="202.0" layoutY="163.0" prefHeight="31.0" prefWidth="187.0" promptText="Date End Event" />
+            <Label fx:id="txtnbrparticipant" layoutX="424.0" layoutY="303.0" text="Number of  Participation in the Event" textFill="WHITE" />
+            <TextField fx:id="txtparticipant" layoutX="687.0" layoutY="298.0" prefHeight="25.0" prefWidth="32.0" />
+            <AnchorPane layoutX="430.0" layoutY="80.0" prefHeight="208.0" prefWidth="261.0" styleClass="card" stylesheets="@../GUI/style.css">
+               <children>
+                  <Button fx:id="Valider" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#AddEvent" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: blue;" text="Add" textFill="WHITE" />
+                  <Button fx:id="Cancel" layoutX="147.0" layoutY="15.0" mnemonicParsing="false" onAction="#EmptyFields" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: blue;" text="Cancel" textFill="WHITE" />
+                  <Button fx:id="Participer" layoutX="146.0" layoutY="81.0" mnemonicParsing="false" onAction="#Participate" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: green;" text="Participate" textFill="WHITE" />
+                  <Button fx:id="showmap1" layoutX="17.0" layoutY="81.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: red;" text="Delete" textFill="WHITE" />
+                  <Button fx:id="showmap" layoutX="18.0" layoutY="145.0" mnemonicParsing="false" onAction="#ShowMap" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: red;" text="Map" textFill="WHITE" />
+                  <Button layoutX="148.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#goToPieChart" prefHeight="31.0" prefWidth="105.0" style="-fx-background-color: blue;" text="Stats" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="sponsor" graphicTextGap="0.0" layoutX="389.0" layoutY="14.0" mnemonicParsing="false" onAction="#sponsor" opacity="0.54" prefHeight="31.0" prefWidth="98.0" text="Sponsor" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="17.0" />
+               </font>
+               <effect>
+                  <Blend mode="RED" />
+               </effect>
+               <styleClass>
+                  <String fx:value="gardien" />
+                  <String fx:value="card" />
+                  <String fx:value="card" />
+               </styleClass>
+            </Button>
+            <Button fx:id="UpdateEvent" layoutX="682.0" layoutY="9.0" mnemonicParsing="false" onAction="#UpdateEvent" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: green;" text="Update" textFill="WHITE" />
+            <Button fx:id="pdf" layoutX="4.0" layoutY="497.0" mnemonicParsing="false" onMouseClicked="#pdf" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: green;" text="PDF" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="map" layoutX="631.0" layoutY="-58.0" mnemonicParsing="false" onMouseClicked="#map" prefHeight="31.0" prefWidth="119.0" style="-fx-background-color: green;" text="map" textFill="WHITE" />
+   </children>
+</AnchorPane>
