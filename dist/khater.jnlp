@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="khater.jnlp">
+  <information>
+    <title>khater</title>
+    <vendor>mahdi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="khater.jar" size="517886" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\fxgraphics2d-1.6.jar" size="20619" download="eager" />
+    <jar href="lib\javax.mail.jar" size="659033" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2384520" download="eager" />
+    <jar href="lib\jfreechart-1.5.0.jar" size="1559088" download="eager" />
+    <jar href="lib\jfreechart-fx-1.0.1.jar" size="27989" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.25.jar" size="2428320" download="eager" />
+    <jar href="lib\twilio-7.9.1-jar-with-dependencies.jar" size="7531656" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="khater.Khater"  name="khater" />
+  <update check="always"/>
+</jnlp>
